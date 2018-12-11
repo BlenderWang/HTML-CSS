@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Panels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Flexbox | Grid</h1>
+            <nav>
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id='toggle'>
+                <div class='menu'>
+                    <a href='#'>hem</a>
+                    <a href='#'>demo</a>
+                    <a href='#'>sammafattning</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <ul>
+                <li>
+                    <!-- radio input to limit selected item each time -->
+                    <input type="radio" id='rad1' name='rad' checked='checked'>
+                    <label for="rad1" class='labels'>
+                        <div>Demo 1</div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Perfectly Centered</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere efficitur urna eu finibus. Duis orci ante, tristique ut elementum sit amet, bibendum vel dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus bibendum sollicitudin leo, eu consectetur ex suscipit vel. Nulla elementum, velit at ornare hendrerit, lectus lorem faucibus nisl, vel aliquam leo ligula quis elit. Nulla in tincidunt neque. Nulla facilisi. Aenean facilisis nunc ut mattis convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id suscipit turpis, ac tristique nulla. Quisque pellentesque tempus lectus ac convallis.</p>
+                            <div class="pen">
+                                <p data-height="455" data-theme-id="dark" data-slug-hash="xQMPBb" data-default-tab="result" data-user="blenderWang"
+                                data-pen-title="Flexbox vs Grid #Perfectly Centered" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad2' name='rad'>
+                    <label for="rad2" class='labels'>
+                        <div>Demo 2</div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Buttons Yay!</h2>
+                            <p>Integer vel enim elementum, sodales arcu in, sodales magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vel nunc ornare, facilisis diam eget, aliquam tellus. Sed sit amet tortor blandit, pellentesque augue mollis, consectetur magna. Etiam tempor a elit vel dapibus. Sed quis arcu sed sem venenatis tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis egestas est vel ligula maximus, eu consequat mi ultricies. Aenean mollis euismod tortor et sodales. Curabitur efficitur dolor at volutpat congue.</p>
+                            <div class="pen">
+                                <p data-height="600" data-theme-id="dark" data-slug-hash="gQZNpw" data-default-tab="result" data-user="blenderWang" data-pen-title="Flexbox vs Grid #Buttons on the right" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad3' name='rad'>
+                    <label for="rad3" class='labels'>
+                        <div>Demo 3</div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Scrubber</h2>
+                            <p>Suspendisse potenti. Mauris faucibus vel leo quis vestibulum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur tempor quis sem eget consequat. Cras vulputate facilisis auctor. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean molestie dolor a ipsum tincidunt ultrices. Vestibulum pulvinar nibh sed varius lacinia. Aenean in elit tellus. Aliquam eu facilisis elit, facilisis imperdiet eros. Cras feugiat, lacus porta volutpat lacinia, urna arcu euismod nisi, nec ullamcorper nulla ex vel quam. Integer ex lorem, posuere sit amet odio sit amet, gravida lacinia ante. Nam fringilla malesuada finibus. Vestibulum imperdiet urna quis sem sollicitudin, sit amet rhoncus risus venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="pen">
+                                <p data-height="450" data-theme-id="dark" data-slug-hash="BGMmVw" data-default-tab="result" data-user="blenderWang" data-pen-title="Flexbox vs Grid #Scrubber" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad4' name='rad'>
+                    <label for="rad4" class='labels'>
+                        <div>Demo 4</div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Flip & Reverse</h2>
+                            <p>Sed id suscipit orci. Curabitur id augue a est volutpat venenatis sed et orci. Cras suscipit pharetra leo sed dictum. Quisque auctor pretium libero id maximus. Donec sed risus viverra, tincidunt diam eu, tincidunt tellus. Duis neque mi, vestibulum a mi sit amet, bibendum pharetra sem. Etiam euismod dignissim lacus, at vulputate tortor feugiat id. Donec neque turpis, condimentum in augue sit amet, pulvinar gravida orci. Aliquam quis dignissim massa, sit amet tempor tortor. Integer venenatis enim a orci pellentesque rutrum. Vivamus eget sem metus.</p>
+                            <div class="pen">
+                                <p data-height="550" data-theme-id="dark" data-slug-hash="gQZwRQ" data-default-tab="result" data-user="blenderWang" data-pen-title="Flexbox vs Grid #Flip & Reverse" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad5' name='rad'>
+                    <label for="rad5" class='labels'>
+                        <div>Demo 5 </div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Does Size Matter?</h2>
+                            <p>Nam at dui et est porttitor rhoncus. Etiam sagittis nulla neque. Suspendisse potenti. Aliquam rhoncus tincidunt lacus ac cursus. Curabitur porttitor lectus nisi, ut molestie lorem malesuada vitae. Vivamus sed dolor feugiat, pulvinar est blandit, finibus orci. Nulla sit amet rhoncus nisi, nec facilisis dolor.</p>
+                            <div class="pen">
+                                <p data-height="550" data-theme-id="dark" data-slug-hash="JexqXM" data-default-tab="result" data-user="blenderWang" data-pen-title="Flexbox vs Grid #content size" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad6' name='rad'>
+                    <label for="rad6" class='labels'>
+                        <div>Demo 6 </div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Why Not One More</h2>
+                            <p>Curabitur porttitor lectus nisi, ut molestie lorem malesuada vitae. Vivamus sed dolor feugiat, pulvinar
+                                est blandit, finibus orci. Nulla sit amet rhoncus nisi, nec facilisis dolor.</p>
+                            <div class="pen">
+                                <p data-height="400" data-theme-id="dark" data-slug-hash="KrJLeN" data-default-tab="result" data-user="blenderWang"
+                                data-pen-title="Flexbox vs Grid #add one more" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad7' name='rad'>
+                    <label for="rad7" class='labels'>
+                        <div>Demo 7 </div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Just For Fun</h2>
+                            <p>Curabitur porttitor lectus nisi, ut molestie lorem malesuada vitae. Vivamus sed dolor feugiat, pulvinar
+                                est blandit, finibus orci. Nulla sit amet rhoncus nisi, nec facilisis dolor.</p>
+                            <div class="pen">
+                                <p data-height="565" data-theme-id="dark" data-slug-hash="jQdJMG" data-default-tab="result" data-user="blenderWang"
+                                data-pen-title="Flexbox vs Grid #fun time" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad8' name='rad'>
+                    <label for="rad8" class='labels'>
+                        <div>Demo 8 </div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Flex Image Gallery</h2>
+                            <p>Sed id suscipit orci. Curabitur id augue a est volutpat venenatis sed et orci. Cras suscipit pharetra
+                                leo sed dictum. Quisque auctor pretium libero id maximus. Donec sed risus viverra, tincidunt diam eu,
+                                tincidunt tellus. Duis neque mi, vestibulum a mi sit amet, bibendum pharetra sem. Etiam euismod
+                                dignissim lacus, at vulputate tortor feugiat id. Donec neque turpis, condimentum in augue sit amet,
+                                pulvinar gravida orci. Aliquam quis dignissim massa, sit amet tempor tortor. Integer venenatis enim a
+                                orci pellentesque rutrum. Vivamus eget sem metus.</p>
+                            <div class="pen">
+                                <p data-height="715" data-theme-id="dark" data-slug-hash="WKXpeP" data-default-tab="result,css" data-user="blenderWang"
+                                data-pen-title="JavaScript30 Flex Image Gallery" class="codepen pen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id='rad9' name='rad'>
+                    <label for="rad9" class='labels'>
+                        <div>Demo 9 </div>
+                    </label>
+                    <div class="accordionSlide">
+                        <div class="demo">
+                            <h2>Grid Image Gallery</h2>
+                            <p>Quisque auctor pretium libero id maximus. Donec sed risus viverra, tincidunt diam eu,
+                                tincidunt tellus. Duis neque mi, vestibulum a mi sit amet, bibendum pharetra sem. Etiam euismod
+                                dignissim lacus, at vulputate tortor feugiat id. Donec neque turpis, condimentum in augue sit amet,
+                                pulvinar gravida orci. Aliquam quis dignissim massa, sit amet tempor tortor. Integer venenatis enim a
+                                orci pellentesque rutrum. Vivamus eget sem metus.</p>
+                            <div class="pen">
+                                <p data-height="735" data-theme-id="dark" data-slug-hash="MzxWeV" data-default-tab="result, css" data-user="blenderWang"
+                                data-pen-title="CSS Grid Image Gallery" class="codepen"></p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </main>
+
+        <footer>
+            <p>&copy; 2018 No rights reserved | Xiaorui Wang & Valesca Sarrocchi</p>
+        </footer>
+    </article>
+</body>
+</html>
