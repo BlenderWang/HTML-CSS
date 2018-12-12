@@ -25,21 +25,23 @@ html {
 
 body {
     height: 100vh;
-    width: 100vw;
     margin: 0;
     background: $clr-bg;
     color: $clr-txt;
     font-family: $font-txt, Arial, Helvetica, sans-serif;
 }
 
+
 // Mobile First -- portrait mode
 // Header
+
 header {
     background: $clr-primary;
-    padding-top: 1.5rem;
-    width: 100vw;
-    position: fixed;
-    z-index: 9999999;
+    padding-top: 1rem;
+    background: $clr-primary;
+  width: 100vw;
+  height: auto;
+  position: relative;
 }
 
 h1 {
@@ -54,16 +56,33 @@ nav {
     text-align: center;
     background: $clr-primary;
     width: 100%;
+    line-height: 1rem;
     box-shadow: 0 3px 2px darken($clr-primary, 10%);
 }
 
+.menu {
+    display: inline-block;
+    font-family: $font-subtitle, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $clr-bg;
+    padding-top: 1em;
+    // padding-bottom: 1em;
+
+    a {
+        clear: left;
+        text-decoration: none;
+        color: $clr-bg;
+        margin: 0 .5em;
+    }
+}
+
 nav > label {
-    display: block;
-    cursor: pointer;
     font-size: 1.2rem;
     color: $clr-bg;
     margin: 0 0 0 1rem;
     line-height: 1rem;
+    display: none;
     width: 1rem;
     position: relative;
     top: -1.5rem;
@@ -73,27 +92,7 @@ nav > label {
     display: none;
 }
 
-#toggle:checked + .menu {
-    display: block;
-}
 
-.menu {
-    width: 100%;
-    text-align: center;
-    display: none;
-    font-family: $font-subtitle, Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: $clr-bg;
-
-    a {
-        display: block;
-        border-bottom: 1px solid darken($clr-primary, 10%);
-        text-decoration: none;
-        color: $clr-bg;
-        padding: 1em 0;
-    }
-}
 
 // main
 main {
@@ -271,211 +270,3 @@ footer {
 }
 
 // media query for desktop & laptop
-@media only screen and (min-width: 500px) {
-    // header {
-    //     // align centered in firefox without padding-top
-    //     padding-top: 2rem;
-    // }
-    // .menu {
-    //     display: inline-block;
-    //     font-size: 1.1rem;
-
-    //     a {
-    //         // clear: left;
-    //         // margin: 0 .5em;
-    //         border: 0;
-    //     }
-    // }
-    // nav > label {
-    //     display: none;
-    // }
-
-    // #toggle {
-    //     display: none;
-    // }
-
-    // // feature query
-    // @supports (display: grid) {
-    //     .menu {
-    //         display: grid;
-    //         grid-template-columns: auto auto auto;
-    //         justify-content: space-evenly;
-    //     }
-    // }
-
-
-
-    // Here goes all the header styling
-    header {
-        padding-top: 1rem;
-    }
-
-    nav {
-        line-height: 1rem;
-    }
-
-    .menu {
-        display: inline-block;
-        font-size: 1.1rem;
-        padding-top: 1em;
-
-        a {
-            // clear: left;
-            margin: 0 .5em;
-            border: 0;
-        }
-    }
-
-    nav > label {
-        display: none;
-    }
-
-    #toggle {
-        display: none;
-    }
-
-    // feature query
-    @supports (display: grid) {
-        nav {
-            display: grid;
-            justify-content: space-evenly;
-        }
-        .menu {
-            display: grid;
-            grid-template-columns: minmax(1em, 1fr) minmax(1em, 1fr) minmax(1em, 1fr);
-            grid-template-rows: 2rem;
-        }
-        nav > label {
-            display: none;
-        }
-    }
-
-    // Main section styling
-    main {
-        height: 100vh;
-    }
-    main > ul {
-        list-style: none;
-    }
-
-    // hide the input
-    input[type='radio'] {
-        position: absolute;
-        top: -999999px;
-        left: -999999px;
-    }
-
-    // vericle labels
-    .labels {
-        display: block;
-        float: left;
-        height: 100vh;
-        width: $tab-width;
-        overflow: hidden;
-        text-align: center;
-        font-size: 14px;
-        line-height: $tab-width + 10;
-        background: $clr-tertiary;
-        transition: background 300ms ease;
-    }
-
-    li:nth-child(even) > input + label {
-        background: lighten($clr-tertiary, 15%);
-    }
-
-    .labels:hover, li:nth-child(even) > input + label:hover {
-        background: $clr-primary;
-        color: $clr-bg;
-        cursor: pointer;
-    }
-
-    input[type='radio']:checked ~ .labels {
-        background: $clr-secondary;
-        color: lighten($clr-txt, 10%);
-        cursor: default !important;
-    }
-
-    // sliders
-    .accordionSlide {
-        display: block;
-        height: 100%;
-        width: 0;
-        padding: 10px 0;
-        float: left;
-        overflow-x: hidden;
-        font-size: 12px;
-        line-height: 1.1;
-        transition: all 500ms ease;
-
-        * {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    }
-
-    input[type='radio']:not(:checked) ~ label > * {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2em;
-        white-space: nowrap;
-        transform: rotate(-90deg);
-    }
-
-    input[type='radio']:checked ~ label > * {
-        display: none;
-    }
-
-    .clear {
-        clear: both;
-    }
-
-    @for $i from 2 through $max-tabs {
-        @for $j from 1 through $i {
-            li:nth-child(#{$j}):nth-last-child(#{$i - $j + 1}) input[type='radio']:checked ~ .accordionSlide {
-                width: calc(100% - #{$i * $tab-width});
-            }
-        }
-    }
-
-    .demo {
-        max-height: 100vh;
-        margin: 1rem auto;
-    }
-
-    h2 {
-        text-align: center;
-        font-family: $font-subtitle, Arial, Helvetica, sans-serif;
-        font-size: 2rem;
-        font-weight: 600;
-    }
-
-    .demo > p {
-        text-align: justify;
-        font-size: 1.2rem;
-        margin: 1rem 0;
-    }
-
-    .pen {
-        max-width: 80%;
-        margin: 10px auto;
-        // box-shadow: 0 0 10px lighten($clr-tertiary, 10%);
-        // border: 1px solid lighten($clr-tertiary, 10%);
-    }
-
-    // footer
-    footer {
-        position: relative;
-        background: darken($clr-txt, 8%);
-        text-align: center;
-        padding-top: 1rem;
-
-        p {
-            // position: relative;
-            // top: 50%;
-            transform: translateY(-30%);
-            font-size: 1.1em;
-            color: darken($clr-bg, 5%);
-        }
-    }
-}
